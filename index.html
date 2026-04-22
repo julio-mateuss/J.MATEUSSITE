@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -7,10 +7,10 @@
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- FIM GOOGLE FONTS-->
-    <link rel="shotcut icon" href="images/LOGO-JMATEUS-ENGENHARIA-BRANCA.png">
+    <link rel="shotcut icon" id="siteFavicon" href="images/LOGO-JMATEUS-ENGENHARIA-BRANCA.png">
     <!-- BOOTSTRAP ICONS-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- FIM BOOTSTRAP ICONS-->
@@ -26,13 +26,18 @@
 
 
     <link rel="stylesheet" href="style.css">
-    <title>J. Mateus Engenharia</title>
+    <title>Engenharia Mecânica, Adequação NR-12 e Laudos Técnicos | J. Mateus Engenharia</title>
+    <meta name="description" content="J. Mateus Engenharia entrega engenharia mecânica com foco em projetos mecânicos, adequação NR-12, laudos técnicos e consultoria técnica para soluções industriais seguras, eficientes e em conformidade normativa.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://engenheirojulio.com.br/">
 </head>
 <body>
 
  <!-- Whatsapp flutuante-->
-    <a href="https://wa.me/5584988782069?text=Olá, poderia me falar sobre projetos?" class="whatsapp-float" target="_blank">
-    <i class="bi bi-whatsapp"></i></a>
+    <a href="https://wa.me/5584988782069?text=Olá, poderia me falar sobre projetos?" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Fale no WhatsApp com a J. Mateus Engenharia">
+        <i class="bi bi-whatsapp" aria-hidden="true"></i>
+        <span class="whatsapp-text">Fale no WhatsApp</span>
+    </a>
 
 
  <!-- fim do Whatsapp flutuante-->
@@ -41,7 +46,7 @@
         <div class="interface">
             <div class="logo">
                 <a href="#">
-                    <img src="images/LOGO-JMATEUS-ENGENHARIA-BRANCA.png" alt="Logo de J. Mateus Engenharia" width="100px">
+                    <img src="images/logo_horizontal_bep-removebg-preview.png" data-logo data-dark="images/logo_horizontal_bep-removebg-preview.png" data-light="images/logo_horizontal_peb-removebg-preview.png" alt="Logo de J. Mateus Engenharia">
                 </a>
     
             </div>
@@ -65,14 +70,30 @@
 
 
             </nav>
-            <div class="alivio">
-
-                
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema" aria-pressed="false">
+                    <i class="bi bi-brightness-high-fill"></i>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu" aria-controls="mobileNav" aria-expanded="false">
+                    <i class="bi bi-list"></i>
+                </button>
             </div>
 
 
         </div><!--!interface-->
     </header>
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <nav class="mobile-nav" id="mobileNav" aria-hidden="true">
+        <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Fechar menu">
+            <i class="bi bi-x-lg"></i>
+        </button>
+        <ul>
+            <li><a href="#INICIO">Início</a></li>
+            <li><a href="#SERVICOS">Serviços</a></li>
+            <li><a href="#SOBRE">Sobre</a></li>
+            <li><a href="#PORTIFOLIO">Portifólio</a></li>
+        </ul>
+    </nav>
 
 
     <main>
@@ -81,50 +102,67 @@
         <section class="topo-do-site" id="INICIO">
 
             <div class="interface">
-                <div class="flex">
-                    <div class="txt-topo-site">
-                        <h1>Engenharia Mecânica de Alta Qualidade e Confiança em todo RN<span>.</span></h1>
-                        <p>Ofereço soluções especializadas em engenharia mecânica, 
-                            focadas em segurança, eficiência e conformidade com normas
-                             técnicas como NR 12 e NR 13. Com compromisso e responsabilidade, 
-                             ajudo meus clientes a resolverem problemas críticos, garantindo 
-                             serviços personalizados e de alta qualidade.</p>
-
-                        <div class="btn-contato">
-                            <a href="contato_forms.html">
-
-
-                                <button><i class="bi bi-pen"></i>Entrar em contato</button>
-                            </a>
-                        </div> <!-- btn contato-->
-
-
-
-
-                    </div><!-- txt topo site-->
-                    <div class="img-topo-site">
-
-                        <img src="images/LOGO-JMATEUS-ENGENHARIA-BRANCA.png" alt="" width="450px">
-                    </div> <!-- img topo site-->
-
-
-
-                </div> <!--flex-->
+                <div class="hero-clean">
+                    <img src="images/logo_horizontal_bep-removebg-preview.png" data-logo data-theme-fixed="true" data-dark="images/logo_horizontal_bep-removebg-preview.png" data-light="images/logo_horizontal_peb-removebg-preview.png" alt="Logo da J. Mateus Engenharia" class="hero-logo">
+                    <h1>Engenharia Mecânica para Operações Seguras e Produtivas</h1>
+                    <p class="hero-subtitle">Atuação técnica em projetos mecânicos, adequação NR-12, laudos técnicos e consultoria técnica para reduzir risco, elevar eficiência operacional e garantir conformidade normativa.</p>
+                    <div class="btn-contato">
+                        <a href="#CONTATO"><button type="button">Fale com um engenheiro</button></a>
+                    </div>
+                </div>
 
 
             </div><!-- interface-->
             
         </section> <!-- section topo do site-->
 
+        <section class="especialidades" id="PROBLEMAS">
+            <div class="interface">
+                <h2 class="titulo">PROBLEMAS OPERACIONAIS EXIGEM <span>RESPOSTA TÉCNICA.</span></h2>
+                <div class="flex">
+                    <div class="especialidades-box">
+                        <i class="bi bi-exclamation-triangle"></i>
+                        <span class="service-badge badge-blue">Risco</span>
+                        <h3>SEGURANÇA EM MÁQUINAS COMPROMETIDA</h3>
+                        <p>Equipamentos sem adequação NR-12 aumentam risco de acidente, paradas e exposição legal da operação.</p>
+                    </div>
+
+                    <div class="especialidades-box">
+                        <i class="bi bi-shield-check"></i>
+                        <span class="service-badge badge-purple">Conformidade</span>
+                        <h3>PASSIVO NORMATIVO E PRESSÃO DE AUDITORIA</h3>
+                        <p>Sem análise técnica estruturada, a empresa perde previsibilidade e enfrenta dificuldade para comprovar conformidade normativa.</p>
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <div class="especialidades-box">
+                        <i class="bi bi-graph-up-arrow"></i>
+                        <span class="service-badge badge-cyan">Performance</span>
+                        <h3>BAIXA EFICIÊNCIA OPERACIONAL</h3>
+                        <p>Falhas recorrentes em máquinas e sistemas mecânicos impactam produtividade, custo e confiabilidade industrial.</p>
+                    </div>
+
+                    <div class="especialidades-box">
+                        <i class="bi bi-person-workspace"></i>
+                        <span class="service-badge badge-green">Decisão</span>
+                        <h3>DECISÕES SEM BASE DE ENGENHARIA</h3>
+                        <p>Com laudos técnicos e consultoria técnica aplicada, a decisão passa a ser segura, objetiva e orientada por dados de campo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="especialidades" id="SERVICOS">
             <div class="interface">
-                <h2 class="titulo">NOSSOS <span>SERVIÇOS.</span></h2>
+                <h2 class="titulo">SOLUÇÕES EM <span>ENGENHARIA MECÂNICA.</span></h2>
                 <div class="flex">
 
                     <div class="especialidades-box">
                         <i class="bi bi-gear"></i>
-                        <h3>ADEQUAÇÃO À NR12</h3>
-                        <p>Garanto que máquinas e equipamentos atendam às normas de segurança, prevenindo acidentes e garantindo conformidade regulatória.</p>
+                        <span class="service-badge badge-blue">Conformidade</span>
+                        <h3>ADEQUAÇÃO NR-12 E SEGURANÇA EM MÁQUINAS</h3>
+                        <p>Executamos diagnóstico, plano de ação e validação para reduzir risco de acidentes e garantir conformidade normativa em máquinas e equipamentos.</p>
                     </div><!--especialidades-box-->
 
                     
@@ -136,8 +174,9 @@
 
                     <div class="especialidades-box">
                         <i class="bi bi-wrench"></i>
-                        <h3>PROJETOS MECÂNICOS</h3>
-                        <p>Realizo projetos de máquinas, sistemas de linha de vida, e estruturas metálicas, além de oferecer serviços de engenharia reversa.</p>
+                        <span class="service-badge badge-purple">Projetos</span>
+                        <h3>PROJETOS MECÂNICOS INDUSTRIAIS</h3>
+                        <p>Desenvolvemos projetos mecânicos para fabricação, retrofit e melhoria de desempenho com foco em confiabilidade, manutenção e produtividade.</p>
                     </div><!--especialidades-box-->
 
                 </div><!--flex-->
@@ -146,15 +185,17 @@
                 <div class="flex">
                     <div class="especialidades-box">
                         <i class="bi bi-search"></i>
-                        <h3>PERÍCIA TÉCNICA</h3>
-                        <p>Desenvolvo projetos completos de prevenção e combate a incêndios, assegurando a segurança e conformidade dos estabelecimentos.</p>
+                        <span class="service-badge badge-cyan">Análises</span>
+                        <h3>LAUDOS TÉCNICOS E ANÁLISE TÉCNICA</h3>
+                        <p>Emitimos laudos técnicos com base normativa e evidências de campo para apoiar decisões operacionais, jurídicas e de compliance.</p>
                     </div><!--especialidades-box-->
 
                     <div class="especialidades-box">
                         <!-- <i class="fa-solid fa-pipe"></i> -->
                         <i class="fa-solid fa-oil-well"></i>
-                        <h3>PROJETOS DE TUBULAÇÃO</h3>
-                        <p>Desenvolvimento de sistemas de tubulação industriais conforme normas técnicas, garantindo eficiência e segurança operacional.</p>
+                        <span class="service-badge badge-green">Eficiência</span>
+                        <h3>CONSULTORIA TÉCNICA E SOLUÇÕES INDUSTRIAIS</h3>
+                        <p>Apoiamos sua operação com soluções industriais sob medida para tubulações, utilidades e equipamentos críticos, elevando a eficiência operacional.</p>
                     </div>
 
                 </div><!--flex-->
@@ -168,32 +209,15 @@
         <section class="sobre" id="SOBRE">
             <div class="interface">
                 <div class="flex">
-                    <div class="img-sobre">
-
-                        <img src="images/LOGO-JMATEUS-ENGENHARIA-BRANCA.png" alt="Logo de J. Mateus Engenharia">
-                    </div>
-
-
-
-                    <!-- <div class="img-sobre">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DHyDS01RfUH/?utm_source=ig_web_copy_link/" data-instgrm-version="14" style="max-width: 540px; min-width: 326px;">
-                            <a href="https://www.instagram.com/p/DHyDS01RfUH/?utm_source=ig_web_copy_link/">Ver esta publicação no Instagram</a>
-                        </blockquote>
-                        <script async src="//www.instagram.com/embed.js"></script>
-                    </div> -->
-                    
-
-
                     <div class="txt-sobre">
-                        <h2>SOBRE A J. MATEUS ENGENHARIA</h2>
-                        <P>A <span class="empresa">J. Mateus Engenharia</span> é uma empresa de engenharia mecânica dedicada a fornecer soluções inovadoras e eficientes para projetos mecânicos, engenharia de segurança e perícias técnicas. Com uma equipe especializada e experiente, buscamos transformar desafios em soluções práticas e inteligentes, agregando valor aos nossos clientes e garantindo excelência em cada entrega.
-                            Nosso compromisso é ser referência no mercado, oferecendo serviços de alto nível que unem qualidade, responsabilidade e inovação.
-                            
+                        <h2 class="fade-in-up">AUTORIDADE TÉCNICA EM ENGENHARIA MECÂNICA</h2>
+                        <P class="fade-in-up">A <span class="empresa">J. Mateus Engenharia</span> atua com método técnico, precisão de execução e leitura prática do chão de fábrica. Conduzimos projetos mecânicos, adequação NR-12, laudos técnicos e consultoria técnica com foco em segurança em máquinas, conformidade normativa e desempenho industrial. Cada entrega é construída para resolver problema real de operação, com rastreabilidade técnica e comunicação objetiva para decisão rápida.
                         </p>
-                        <div class="btn-social">
+                        <div class="btn-social fade-in-up">
                             <a href="https://www.instagram.com/jmateusengenharia/"><button><i class="bi bi-instagram"></i></button></a>
-                            <a href="https://www.linkedin.com/in/julio-mateus555/"><button><i class="bi bi-linkedin"></i></i></button></a>
+                            <a href="https://www.linkedin.com/company/j-mateus-engenharia/"><button><i class="bi bi-linkedin"></i></i></button></a>
                             <a href="https://wa.me/5584988782069"><button><i class="bi bi-whatsapp"></i></button></a>
+                            <a href="mailto:contato@jmateusengenharia.com.br"><button><i class="bi bi-envelope-fill"></i></button></a>
                         </div>
                     </div><!--txt sobre-->
 
@@ -203,78 +227,498 @@
 
         <section class="portifolio" id="PORTIFOLIO">
             <div class="interface">
-                <h2 class="titulo">MEU <span>PORTIFÓLIO.</span></h2>
-                <div class="flex">
-                    <div class="img-port" style="background-image: url(images/Projetos-mecânicos.png);">
-                        <div class="overlay">Projetos Mecânicos</div>
+                <h2 class="titulo">PORTFÓLIO <span>TÉCNICO.</span></h2>
+                <div class="portfolio-selector" id="portfolioSelector" tabindex="0" aria-label="Carrossel de soluções industriais em destaque">
+                    <button class="portfolio-control" type="button" data-dir="prev" aria-label="Serviço anterior">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+                    <div class="portfolio-track">
+                        <article class="portfolio-card is-active" style="--card-image: url('images/servico-projetos-mecanicos-cad.png');">
+                            <div class="portfolio-card-label">Projetos Mecânicos</div>
+                        </article>
+                        <article class="portfolio-card" style="--card-image: url('images/servico-nr12-seguranca-maquinas.png');">
+                            <div class="portfolio-card-label">NR 12</div>
+                        </article>
+                        <article class="portfolio-card" style="--card-image: url('images/servico-laudos-tecnicos.png');">
+                            <div class="portfolio-card-label">Perícia Técnica</div>
+                        </article>
+                        <article class="portfolio-card" style="--card-image: url('images/servico-instalacoes-mecanicas-tubulacoes.png');">
+                            <div class="portfolio-card-label">Projetos de Tubulação</div>
+                        </article>
+                        <article class="portfolio-card" style="--card-image: url('images/servico-sistemas-termicos-industriais.png');">
+                            <div class="portfolio-card-label">Inspeção Industrial</div>
+                        </article>
+                        <article class="portfolio-card" style="--card-image: url('images/servico-consultoria-mecanica.png');">
+                            <div class="portfolio-card-label">Consultoria Mecânica</div>
+                        </article>
+                        <article class="portfolio-card" style="--card-image: url('images/servico-pmoc-climatizacao.png');">
+                            <div class="portfolio-card-label">PMOC e Climatização</div>
+                        </article>
                     </div>
-                    <div class="img-port" style="background-image: url(images/Projetos-NR12.png);">
-                        <div class="overlay">NR 12</div>
-                    </div>
- 
-
-                    
-
-                </div><!--flex-->
+                    <button class="portfolio-control" type="button" data-dir="next" aria-label="Próximo serviço">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                </div>
 
             </div><!--interface-->
         </section><!--portifolio-->
 
-        <section class="formulario">
+        <section class="instagram-preview" id="INSTAGRAM">
             <div class="interface">
-                <h2 class="titulo">FALE COM UM <span>ENGENHEIRO</span></h2>
-                <!-- <form action="https://api.staticforms.xyz/submit" method="post"> -->
-                <form action="https://formsubmit.co/juliodev555@gmail.com" method="POST">
+                <h2 class="titulo">INSIGHTS <span>DE ENGENHARIA.</span></h2>
+                <div class="instagram-embeds">
+                    <div class="instagram-embed-item">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DP9mNCOD5l8/" data-instgrm-version="14"></blockquote>
+                    </div>
+                    <div class="instagram-embed-item">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DP9mNCOD5l8/" data-instgrm-version="14"></blockquote>
+                    </div>
+                    <div class="instagram-embed-item">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DP9mNCOD5l8/" data-instgrm-version="14"></blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    
-                    <input type="name" name="nome" id="" placeholder="*Seu nome completo" required>
-                    <input type="email" name="email" id="" placeholder="*Seu melhor e-mail" required>
-                    <input type="text" name="celular" id="" placeholder="Seu celular">
-                    <textarea name="mensagem" id="" placeholder="Sua mensagem"></textarea>
-                    <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
+        <section class="atuacao-tecnica" id="ATUACAO">
+            <div class="interface">
+                <h2 class="titulo">DIFERENCIAIS <span>J. MATEUS.</span></h2>
+                <p class="atuacao-subtitulo">Estrutura técnica para decisões seguras, conformidade normativa e execução mecânica com resultado prático.</p>
 
-                    <!-- <input type="hidden" name="accessKey" value="3f8854d4-25dc-4fc2-8181-4c9c57c3ec31"> -->
-                    <!-- <input type="hidden" name="redirectTo" value="https://engenheirojulio.com.br"> -->
-                
-                </form>
+                <div class="atuacao-wrap">
+                    <div class="atuacao-core" aria-hidden="true">
+                        <div class="atuacao-core-ring">
+                            <span>Padrão<br>Técnico</span>
+                        </div>
+                    </div>
+
+                    <div class="atuacao-lista" role="listbox" aria-label="Diferenciais técnicos">
+                        <button class="atuacao-item is-active" type="button"
+                            data-titulo="Atendimento direto com engenheiro"
+                            data-texto="Você trata sua demanda com quem executa análise técnica e define o caminho de engenharia desde o início."
+                            data-link="#CONTATO">
+                            Atendimento direto com engenheiro
+                        </button>
+                        <button class="atuacao-item" type="button"
+                            data-titulo="Análise técnica orientada a risco"
+                            data-texto="Priorizamos criticidade operacional para atuar primeiro no que mais impacta segurança em máquinas e continuidade da produção."
+                            data-link="#CONTATO">
+                            Análise técnica orientada a risco
+                        </button>
+                        <button class="atuacao-item" type="button"
+                            data-titulo="Conformidade normativa aplicada"
+                            data-texto="Adequação NR-12 e laudos técnicos conduzidos para atender requisito legal com viabilidade real de execução."
+                            data-link="#CONTATO">
+                            Conformidade normativa aplicada
+                        </button>
+                        <button class="atuacao-item" type="button"
+                            data-titulo="Projetos mecânicos com foco em execução"
+                            data-texto="Projetos mecânicos pensados para fabricação, montagem e manutenção, reduzindo retrabalho e incerteza de campo."
+                            data-link="#CONTATO">
+                            Projetos mecânicos com foco em execução
+                        </button>
+                        <button class="atuacao-item" type="button"
+                            data-titulo="Laudos técnicos com linguagem decisória"
+                            data-texto="Documentos técnicos claros, defensáveis e objetivos para sustentar decisões de gestão, auditoria e conformidade."
+                            data-link="#CONTATO">
+                            Laudos técnicos com linguagem decisória
+                        </button>
+                        <button class="atuacao-item" type="button"
+                            data-titulo="Soluções industriais sob medida"
+                            data-texto="Consultoria técnica para adaptar cada solução ao contexto operacional da sua planta, sem resposta genérica."
+                            data-link="#CONTATO">
+                            Soluções industriais sob medida
+                        </button>
+                    </div>
+
+                    <article class="atuacao-descricao" id="atuacaoDescricao" aria-live="polite">
+                        <h3 id="atuacaoTitulo">Atendimento direto com engenheiro</h3>
+                        <p id="atuacaoTexto">Você trata sua demanda com quem executa análise técnica e define o caminho de engenharia desde o início.</p>
+                        <a id="atuacaoLink" href="#CONTATO">Fale com um engenheiro</a>
+                    </article>
+                </div>
+            </div>
+        </section>
 
 
+        <section class="contato-final" id="CONTATO">
+            <div class="interface">
+                <div class="contato-card">
+                    <div class="contato-grid">
+                        <aside class="contato-info">
+                            <h2>Fale Conosco</h2>
 
-            </div><!--interface-->
+                            <div class="contato-bloco">
+                                <h3>Empresa</h3>
+                                <p>Engenharia mecânica aplicada para operações que exigem precisão, segurança em máquinas e conformidade normativa. Entregamos projetos mecânicos, adequação NR-12, laudos técnicos e consultoria técnica com padrão executivo.</p>
+                            </div>
 
+                            <div class="contato-bloco">
+                                <h3>Precisa de ajuda?</h3>
+                                <p>Descreva sua demanda e receba uma análise técnica direcionada para a realidade da sua operação industrial.</p>
+                            </div>
 
-        </section><!--formulario-->
+                            <div class="contato-logo">
+                                <img src="images/logo_horizontal_bep-removebg-preview.png" data-logo data-dark="images/logo_horizontal_bep-removebg-preview.png" data-light="images/logo_horizontal_peb-removebg-preview.png" alt="Logo J. Mateus Engenharia" width="140">
+                            </div>
 
+                            <div class="btn-social contato-social">
+                                <a href="https://www.instagram.com/jmateusengenharia/" aria-label="Instagram"><button type="button"><i class="bi bi-instagram"></i></button></a>
+                                <a href="https://www.linkedin.com/company/j-mateus-engenharia/" aria-label="LinkedIn"><button type="button"><i class="bi bi-linkedin"></i></button></a>
+                                <a href="https://wa.me/5584988782069?text=Olá, poderia me falar sobre projetos?" aria-label="WhatsApp"><button type="button"><i class="bi bi-whatsapp"></i></button></a>
+                                <a href="mailto:contato@jmateusengenharia.com.br" aria-label="E-mail"><button type="button"><i class="bi bi-envelope-fill"></i></button></a>
+                            </div>
+                        </aside>
 
+                        <div class="contato-form-wrap">
+                            <form action="https://formsubmit.co/juliodev555@gmail.com" method="POST" class="contato-form">
+                                <div class="contato-row contato-row-2">
+                                    <input type="text" name="nome" placeholder="Nome completo" required>
+                                    <input type="email" name="email" placeholder="E-mail corporativo" required>
+                                </div>
+
+                                <div class="contato-row contato-row-3">
+                                    <input type="text" name="telefone" placeholder="Telefone com DDD">
+                                    <input type="text" name="empresa" placeholder="Empresa">
+                                    <input type="url" name="site" placeholder="Site (opcional)">
+                                </div>
+
+                                <div class="contato-row">
+                                    <textarea name="mensagem" placeholder="Explique sua demanda (máquina, projeto, adequação, laudo, etc.)" required></textarea>
+                                </div>
+
+                                <div class="btn-enviar contato-submit">
+                                    <input type="submit" value="Enviar demanda para análise">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="contato-bottom">
+                        <p>J. Mateus Engenharia © Todos os direitos reservados.</p>
+                        <div class="contato-links">
+                            <a href="/politica-de-privacidade/">Política de Privacidade</a>
+                            <span>|</span>
+                            <a href="/termos-de-uso/">Termos de Uso</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    <script>
+        (function () {
+            if (!document.querySelector(".instagram-media")) return;
+            const scriptId = "instagram-embed-script";
+            if (document.getElementById(scriptId)) return;
 
-    <footer>
-        <div class="interface">
-            <div class="line-footer">
-                <div class="flex">
-                    <div class="logo-footer">
-                        <a href="#INICIO" class="scroll-to-top">
-                            <img src="images/LOGO-JMATEUS-ENGENHARIA-BRANCA.png" alt="" width="100px">
+            const script = document.createElement("script");
+            script.id = scriptId;
+            script.async = true;
+            script.src = "https://www.instagram.com/embed.js";
+            document.body.appendChild(script);
+        })();
+    </script>
+    <script>
+        (function () {
+            const storageKey = "jm_theme";
+            const themeToggle = document.getElementById("themeToggle");
+            const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+            const themedLogos = document.querySelectorAll("[data-logo]");
+            const siteFavicon = document.getElementById("siteFavicon");
 
-                        </a>
-                        
-                    </div><!--logo footer-->
-                    <div class="btn-social">
-                        <a href="https://www.instagram.com/jmateusengenharia/"><button><i class="bi bi-instagram"></i></button></a>
-                        <a href="https://www.linkedin.com/in/julio-mateus555/"><button><i class="bi bi-linkedin"></i></i></button></a>
-                        <a href="https://wa.me/5584988782069?text=Olá, poderia me falar sobre projetos?"><button><i class="bi bi-whatsapp"></i></button></a>
+            function applyTheme(theme) {
+                const isLight = theme === "light";
+                document.body.classList.toggle("theme-light", isLight);
+                document.body.classList.toggle("theme-dark", !isLight);
 
-                    </div><!--btn social-->
-                </div><!--felx-->
+                themedLogos.forEach((logo) => {
+                    if (logo.hasAttribute("data-theme-fixed")) return;
+                    const darkSrc = logo.getAttribute("data-dark");
+                    const lightSrc = logo.getAttribute("data-light");
+                    logo.src = isLight ? (lightSrc || darkSrc) : darkSrc;
+                });
 
+                if (siteFavicon) {
+                    siteFavicon.href = isLight
+                        ? "images/LOGOS-JMATEUS-ENGENHARIA_PRETA.png"
+                        : "images/LOGO-JMATEUS-ENGENHARIA-BRANCA.png";
+                }
 
-            </div><!--line footer-->
-            <div class="line-footer borda">
-                <p><i class="bi bi-envelope-fill"></i> <a href="mailto:juliodev555@gmail.com">Copyright © 2025 | Desenvolvido por Júlio Mateus | Todos os direitos reservados</a></p>
+                if (themeToggle) {
+                    themeToggle.setAttribute("aria-pressed", isLight ? "true" : "false");
+                    themeToggle.setAttribute("title", isLight ? "Ativar modo noturno" : "Ativar modo diurno");
+                    themeToggle.innerHTML = isLight
+                        ? '<i class="bi bi-moon-stars-fill"></i>'
+                        : '<i class="bi bi-brightness-high-fill"></i>';
+                }
+            }
 
-            </div><!--line footer-->
+            const savedTheme = localStorage.getItem(storageKey);
+            if (savedTheme === "light" || savedTheme === "dark") {
+                applyTheme(savedTheme);
+            } else {
+                applyTheme(prefersDark.matches ? "dark" : "light");
+            }
 
-        </div><!--interface-->
-    </footer>
+            if (themeToggle) {
+                themeToggle.addEventListener("click", () => {
+                    const nextTheme = document.body.classList.contains("theme-light") ? "dark" : "light";
+                    applyTheme(nextTheme);
+                    localStorage.setItem(storageKey, nextTheme);
+                });
+            }
+
+            prefersDark.addEventListener("change", (event) => {
+                if (localStorage.getItem(storageKey)) return;
+                applyTheme(event.matches ? "dark" : "light");
+            });
+        })();
+    </script>
+    <script>
+        (function () {
+            const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+            const mobileMenuClose = document.getElementById("mobileMenuClose");
+            const mobileNav = document.getElementById("mobileNav");
+            const mobileOverlay = document.getElementById("mobileMenuOverlay");
+            const mobileLinks = mobileNav.querySelectorAll("a");
+
+            function openMenu() {
+                mobileNav.classList.add("is-open");
+                mobileOverlay.classList.add("is-open");
+                mobileMenuBtn.setAttribute("aria-expanded", "true");
+                mobileNav.setAttribute("aria-hidden", "false");
+                document.body.style.overflow = "hidden";
+            }
+
+            function closeMenu() {
+                mobileNav.classList.remove("is-open");
+                mobileOverlay.classList.remove("is-open");
+                mobileMenuBtn.setAttribute("aria-expanded", "false");
+                mobileNav.setAttribute("aria-hidden", "true");
+                document.body.style.overflow = "";
+            }
+
+            mobileMenuBtn.addEventListener("click", openMenu);
+            mobileMenuClose.addEventListener("click", closeMenu);
+            mobileOverlay.addEventListener("click", closeMenu);
+            mobileLinks.forEach((link) => link.addEventListener("click", closeMenu));
+
+            window.addEventListener("keydown", (event) => {
+                if (event.key === "Escape") {
+                    closeMenu();
+                }
+            });
+
+            window.addEventListener("resize", () => {
+                if (window.innerWidth > 1020) {
+                    closeMenu();
+                }
+            });
+        })();
+    </script>
+    <script>
+        (function () {
+            const aboutSection = document.getElementById("SOBRE");
+            if (!aboutSection) return;
+
+            const animatedItems = aboutSection.querySelectorAll(".fade-in-up");
+            if (!animatedItems.length) return;
+
+            if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+                animatedItems.forEach((item) => item.classList.add("is-visible"));
+                return;
+            }
+
+            let hasUserScrolled = false;
+            let isSectionPending = false;
+
+            function revealAboutText() {
+                animatedItems.forEach((item) => item.classList.add("is-visible"));
+            }
+
+            function resetAboutText() {
+                animatedItems.forEach((item) => item.classList.remove("is-visible"));
+            }
+
+            function handleFirstScroll() {
+                hasUserScrolled = true;
+                if (isSectionPending) {
+                    revealAboutText();
+                }
+                window.removeEventListener("scroll", handleFirstScroll);
+            }
+
+            const observer = new IntersectionObserver((entries, currentObserver) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) {
+                        isSectionPending = false;
+                        resetAboutText();
+                        return;
+                    }
+                    if (!hasUserScrolled) {
+                        isSectionPending = true;
+                        return;
+                    }
+                    revealAboutText();
+                });
+            }, { threshold: 0.28 });
+
+            observer.observe(aboutSection);
+            window.addEventListener("scroll", handleFirstScroll, { passive: true });
+        })();
+    </script>
+    <script>
+        (function () {
+            const selector = document.getElementById("portfolioSelector");
+            if (!selector) return;
+
+            const track = selector.querySelector(".portfolio-track");
+            const cards = Array.from(selector.querySelectorAll(".portfolio-card"));
+            const prevButton = selector.querySelector('[data-dir="prev"]');
+            const nextButton = selector.querySelector('[data-dir="next"]');
+            const totalCards = cards.length;
+            let activeIndex = 0;
+            let startX = 0;
+            let endX = 0;
+            const showcaseDelay = 3200;
+            const ringSpan = 300;
+            const step = ringSpan / totalCards;
+            const orbitX = 440;
+            const orbitZ = 340;
+            let showcaseTimer = null;
+            let resumeTimer = null;
+
+            if (totalCards < 2) return;
+
+            function render() {
+                cards.forEach((card, index) => {
+                    let relative = index - activeIndex;
+                    if (relative > totalCards / 2) relative -= totalCards;
+                    if (relative < -totalCards / 2) relative += totalCards;
+                    const angleDeg = relative * step;
+                    const angleRad = (angleDeg * Math.PI) / 180;
+                    const tx = Math.sin(angleRad) * orbitX;
+                    const tz = Math.cos(angleRad) * orbitZ;
+
+                    card.style.setProperty("--tx", `${tx}px`);
+                    card.style.setProperty("--tz", `${tz}px`);
+                    const isActive = index === activeIndex;
+                    card.classList.toggle("is-active", isActive);
+                    card.setAttribute("aria-hidden", isActive ? "false" : "true");
+                    card.style.zIndex = `${Math.round(2000 + tz)}`;
+                });
+            }
+
+            function move(direction) {
+                activeIndex = (activeIndex + direction + totalCards) % totalCards;
+                render();
+            }
+
+            function stopShowcase() {
+                if (showcaseTimer) {
+                    clearInterval(showcaseTimer);
+                    showcaseTimer = null;
+                }
+            }
+
+            function startShowcase() {
+                stopShowcase();
+                showcaseTimer = setInterval(() => move(1), showcaseDelay);
+            }
+
+            function scheduleResume(delay = 3500) {
+                clearTimeout(resumeTimer);
+                resumeTimer = setTimeout(() => startShowcase(), delay);
+            }
+
+            prevButton.addEventListener("click", () => {
+                stopShowcase();
+                move(-1);
+                scheduleResume();
+            });
+
+            nextButton.addEventListener("click", () => {
+                stopShowcase();
+                move(1);
+                scheduleResume();
+            });
+
+            selector.addEventListener("keydown", (event) => {
+                if (event.key === "ArrowLeft") {
+                    stopShowcase();
+                    move(-1);
+                    scheduleResume();
+                }
+                if (event.key === "ArrowRight") {
+                    stopShowcase();
+                    move(1);
+                    scheduleResume();
+                }
+            });
+
+            selector.addEventListener("touchstart", (event) => {
+                stopShowcase();
+                startX = event.changedTouches[0].clientX;
+            });
+
+            selector.addEventListener("touchend", (event) => {
+                endX = event.changedTouches[0].clientX;
+                const delta = endX - startX;
+                if (Math.abs(delta) < 40) {
+                    scheduleResume();
+                    return;
+                }
+                if (delta > 0) move(-1);
+                if (delta < 0) move(1);
+                scheduleResume(4500);
+            });
+
+            selector.addEventListener("mouseenter", stopShowcase);
+            selector.addEventListener("mouseleave", () => startShowcase());
+            selector.addEventListener("focusin", stopShowcase);
+            selector.addEventListener("focusout", () => scheduleResume(1200));
+
+            document.addEventListener("visibilitychange", () => {
+                if (document.hidden) {
+                    stopShowcase();
+                } else {
+                    startShowcase();
+                }
+            });
+
+            render();
+            startShowcase();
+        })();
+    </script>
+    <script>
+        (function () {
+            const section = document.getElementById("ATUACAO");
+            if (!section) return;
+
+            const items = Array.from(section.querySelectorAll(".atuacao-item"));
+            const title = document.getElementById("atuacaoTitulo");
+            const text = document.getElementById("atuacaoTexto");
+            const link = document.getElementById("atuacaoLink");
+
+            if (!items.length || !title || !text || !link) return;
+
+            function setActive(item) {
+                items.forEach((button) => button.classList.remove("is-active"));
+                item.classList.add("is-active");
+
+                title.textContent = item.dataset.titulo || "";
+                text.textContent = item.dataset.texto || "";
+                link.href = item.dataset.link || "#";
+            }
+
+            items.forEach((item) => {
+                item.addEventListener("mouseenter", () => setActive(item));
+                item.addEventListener("focus", () => setActive(item));
+                item.addEventListener("click", () => setActive(item));
+            });
+        })();
+    </script>
 </body>
 </html>
+
